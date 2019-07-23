@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app,
+.app-container {
+  height: 100%;
+}
+
+@import "@/components/style.scss";
+
+.app-container {
+  padding: 50px;
+  .box {
+    width: 20%;
+    margin: 10px auto;
+    .react-ratio-image{
+      border:2px solid green;
+      margin-bottom: 10px;
+    }
+  }
+}
