@@ -24,7 +24,11 @@ export default class extends Component {
     const _style = objectAssign({ paddingBottom: 100 * value + '%' }, style);
     return (
       <figure
-        className={classNames(CLASS_NAME, className)}
+        className={classNames(
+          'webkit-sassui-frame-wrapper',
+          CLASS_NAME,
+          className
+        )}
         style={_style}
         {...props}
       />

@@ -63,6 +63,7 @@
     "noop": "github:afeiship/noop",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "webkit-sassui-frame-wrapper": "github:afeiship/webkit-sassui-frame-wrapper"
   }
 }
