@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'noop';
-import objectAssign from 'object-assign';
 
 const CLASS_NAME = 'react-ratio-image';
 
-export default class extends Component {
-  /*===properties start===*/
+export default class ReactRatioImage extends Component {
+  static displayName = CLASS_NAME;
   static propTypes = {
+    /**
+     * The extended className for component.
+     */
     className: PropTypes.string,
+    /**
+     * The ratio value.
+     */
     value: PropTypes.number
   };
 
   static defaultProps = {
     value: 1
   };
-  /*===properties end===*/
 
   render() {
     const { className, value, style, ...props } = this.props;
-    const _style = objectAssign({ paddingBottom: 100 * value + '%' }, style);
+    const _style = { paddingBottom: 100 * value + '%', ...style };
     return (
       <figure
-        className={classNames(
-          'webkit-sassui-frame-wrapper',
-          CLASS_NAME,
-          className
-        )}
+        data-component={CLASS_NAME}
+        className={classNames('wsui-frame-wrapper', CLASS_NAME, className)}
         style={_style}
         {...props}
       />

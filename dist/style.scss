@@ -1,9 +1,9 @@
-@import "node_modules/webkit-sassui-frame-wrapper/dist/webkit-sassui-frame-wrapper.scss";
 $react-ratio-image-options: () !default;
 
 .react-ratio-image {
   width: 100%;
   > img {
     position: absolute;
+    left: 0;
   }
 }
